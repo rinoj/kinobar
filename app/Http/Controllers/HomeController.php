@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Produkti;
+use App\Models\Kategoria;
 
 class HomeController extends Controller
 {
@@ -16,6 +18,11 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+    public function homepage(){
+        $kategorit = Kategoria::all();
+        $produktet = Produkti::all();
+        return view('index')->withKategorit($kategorit)->withProduktet('produktet');
+    }
     /**
      * Show the application dashboard.
      *
@@ -23,6 +30,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $kategorit = Kategoria::all();
+        $produktet = Produkti::all();
+        return view('home')->withKategorit($kategorit)->withProduktet('produktet');
     }
 }

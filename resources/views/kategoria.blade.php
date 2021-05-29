@@ -47,8 +47,11 @@
                 opacity: 0.8;
             "
         >
-
+           
             <div class="row" style="padding-top:300px;">
+                <div class="col-md-12 text-center" style="margin-bottom:15px">                    
+                    <a href="{{route('index')}}" class="btn btn-secondary text-center" style="border-radius: 0px;">Kthehu Mbrapa</a>
+               </div>
                 @foreach($kategoria->produktet as $produkti)
                 <div class=" col-md-8 offset-md-2">
                     <h3 class=" bg-light ">{{$produkti->emri}}</h3>

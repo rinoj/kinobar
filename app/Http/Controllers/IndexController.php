@@ -11,7 +11,7 @@ class IndexController extends Controller
     public function index(){
         $kategorit = Kategoria::all();
         $produktet = Produkti::all();
-        return view('index')->withKategorit($kategorit)->withProduktet('produktet');
+        return view('index')->withKategorit($kategorit)->withProduktet($produktet);
     }
 
     public function kategoria($slug){

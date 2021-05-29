@@ -15,7 +15,7 @@ class CreateProduktetTable extends Migration
     {
         Schema::create('produktet', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('emri');
             $table->string('pershkrimi')->nullable();
             $table->double('qmimi');
             $table->integer('kategoria_id');

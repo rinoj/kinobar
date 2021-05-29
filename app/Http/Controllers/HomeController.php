@@ -32,6 +32,6 @@ class HomeController extends Controller
     {
         $kategorit = Kategoria::all();
         $produktet = Produkti::all();
-        return view('home')->withKategorit($kategorit)->withProduktet('produktet');
+        return view('home')->withKategorit($kategorit)->withProduktet($produktet);
     }
 }

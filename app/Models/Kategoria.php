@@ -9,4 +9,8 @@ class Kategoria extends Model
 {
     use HasFactory;
     protected $table = 'kategoria';
+
+    public function produktet(){
+        return $this->hasMany('App\Models\Produkti');
+    }
 }

@@ -9,4 +9,8 @@ class Produkti extends Model
 {
     use HasFactory;
     protected $table = 'produktet';
+
+    public function kategoria(){
+        return $this->belongsTo('App\Models\Kategoria');
+    }
 }

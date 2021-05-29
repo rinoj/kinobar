@@ -49,15 +49,11 @@
         >
 
             <div class="row" style="padding-top:300px;">
-                @foreach($kategorit as $kategoria)
-                    <div class="col-md-4 {{$kategoria->id % 2 == 1 ? 'offset-md-2' : ''}}">
-                    
-                <a href="{{route('kategoria', $kategoria->slug)}}">
-                        <h3 class="text-center bg-light kategoria">{{$kategoria->emri}}</h3>
-                        </a>
-                    </div>
+                @foreach($kategoria->produktet as $produkti)
+                <div class=" col-md-8 offset-md-2">
+                    <h3 class=" bg-light ">{{$produkti->emri}}</h3>
+                </div>
                 @endforeach
-
 
             </div>
 

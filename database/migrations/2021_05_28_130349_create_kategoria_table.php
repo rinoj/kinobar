@@ -16,6 +16,7 @@ class CreateKategoriaTable extends Migration
         Schema::create('kategoria', function (Blueprint $table) {
             $table->id();
             $table->string('emri');
+            $table->string('slug');
             $table->string('pershkrimi')->nullable();
             $table->timestamps();
         });
